@@ -1,0 +1,39 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$border-radius: 5px;
+
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid $secondary-color;
+  border-radius: $border-radius;
+}
+
+// Styles for the submit button
+#button{
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  width: 200px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  height: 20px;
+}
+
+// Hover effect for the submit button
+#button:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+// Focus effect for inputs and submit button
+input:focus,
+#button:focus {
+  outline: none;
+  box-shadow: 0 0 5px $primary-color;
+}
