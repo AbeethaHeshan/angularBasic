@@ -1,7 +1,7 @@
 <div class="form-container" style="position: absolute;top: 0;left: 0;right: 0;bottom:0;margin: auto;height: 300px;">
-  <h3 style="text-align: center;">{{title}}</h3>
+  <h3 [ngClass]="isGreen ? 'text-green' : 'text-red'" style="text-align: center;">{{title}}</h3>
   <form (ngSubmit)="onSubmit()">
-    <div> 
+    <div>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" [(ngModel)]="username" required>
     </div>
@@ -12,6 +12,10 @@
     </div>
     <app-button (click)="onSubmit()" [title]="'Login'"></app-button>
   </form>
+   <ul *ngIf="numbers.length > 0">
+      <li *ngFor="let number of numbers">{{number}}</li>
+   </ul>
+   <p *ngif="numbers.length == 0">No data</p>
 </div>
 
 <!-- <router-outlet /> -->
